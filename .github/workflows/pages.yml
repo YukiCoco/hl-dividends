@@ -25,7 +25,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Unit tests
-        run: python3 -m pytest -q test_build.py
+        run: |
+          python3 -m pip install --quiet pytest
+          python3 -m pytest -q test_build.py
         env:
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
       - name: Fetch dividends
