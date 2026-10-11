@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xyz 除息日历：Hyperliquid 股票永续的分红计划</title>
+<meta name="description" content="Hyperliquid trade.xyz 股票永续底层的未来除息日、金额与预期 oracle 跳空，已宣告与推算分开标注。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f3f5f9;
+    --surface: #ffffff;
+    --ink: #0f1b2d;
+    --muted: #5b6b7f;
+    --faint: #8d9aad;
+    --line: #d8dee8;
+    --band: #eef1f6;
+    --blue: #1e4fd8;
+    --blue-ink: #163ea8;
+    --blue-pale: #e7edfb;
+    --today: #c8381e;
+    --sans: "Instrument Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+    --serif: "Instrument Serif", "Songti SC", "Noto Serif CJK SC", Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.5; font-variant-numeric: tabular-nums; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  a { color: var(--blue-ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- header ---------- */
+  header.top { padding: 40px 0 28px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 32px; }
+  h1 { margin: 0; font-weight: 500; font-size: 34px; line-height: 1.15; letter-spacing: -0.01em; }
+  h1 .dex { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1.1em; }
+  .lede { margin: 10px 0 0; max-width: 62ch; color: var(--muted); }
+  .stamp { color: var(--muted); font-size: 14px; text-align: right; }
+  .stamp strong { color: var(--ink); font-weight: 500; }
+
+  /* ---------- calendar ---------- */
+  section.cal { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 20px 20px 16px; }
+  .cal-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px; margin-bottom: 14px; }
+  .cal-head h2 { margin: 0; font-size: 18px; font-weight: 500; }
+  .legend { display: flex; gap: 18px; color: var(--muted); font-size: 14px; align-items: center; }
+  .legend .chip { pointer-events: none; }
+  .grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+  .dow { color: var(--faint); font-size: 13px; padding: 0 6px 4px; }
+  .cell { position: relative; min-height: 78px; background: var(--band); border-radius: 4px; padding: 6px 6px 8px; display: flex; flex-direction: column; gap: 4px; }
+  .cell.past { background: transparent; }
+  .cell.past .chip { opacity: .45; }
+  .cell.today { box-shadow: inset 0 0 0 2px var(--today); background: var(--surface); }
+  .cell .d { font-family: var(--serif); font-size: 20px; line-height: 1; color: var(--muted); display: flex; justify-content: space-between; align-items: baseline; }
+  .cell.today .d { color: var(--today); }
+  .cell .d small { font-family: var(--sans); font-size: 12px; color: var(--faint); }
+  .cell.today .d small { color: var(--today); }
+  .cell .m { font-family: var(--sans); font-size: 11px; color: var(--faint); }
+  .chip { display: inline-flex; align-items: baseline; gap: 6px; font-size: 13px; line-height: 1.2; padding: 3px 7px; border-radius: 3px; border: 1px solid transparent; cursor: pointer; text-align: left; background: var(--blue); color: #fff; max-width: 100%; }
+  .chip b { font-weight: 600; }
+  .chip span { opacity: .9; }
+  .chip.est { background: var(--blue-pale); color: var(--blue-ink); border: 1px dashed var(--blue-ink); }
+  .chip:hover { filter: brightness(.96); }
+  .cal-empty { color: var(--muted); padding: 18px 6px; }
+
+  /* ---------- controls ---------- */
+  .controls { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; margin: 36px 0 12px; }
+  .controls h2 { margin: 0 auto 0 0; font-size: 18px; font-weight: 500; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; background: var(--surface); }
+  .seg button { background: transparent; border: 0; padding: 6px 12px; cursor: pointer; color: var(--muted); border-right: 1px solid var(--line); }
+  .seg button:last-child { border-right: 0; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  input[type="search"] { font: inherit; padding: 6px 10px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); min-width: 180px; color: var(--ink); }
+
+  /* ---------- table ---------- */
+  .tablewrap { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 880px; }
+  thead th { text-align: left; font-weight: 500; color: var(--muted); font-size: 13px; padding: 10px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  thead th.num, td.num { text-align: right; }
+  tbody tr.row { cursor: pointer; }
+  tbody tr.row:nth-child(4n+3) td { background: var(--band); }
+  tbody tr.row:hover td { background: var(--blue-pale); }
+  tbody tr.row[aria-expanded="true"] td { background: var(--blue-pale); }
+  td { padding: 9px 12px; vertical-align: top; border-bottom: 1px solid var(--line); }
+  td.sym, thead th:first-child { position: sticky; left: 0; background: var(--surface); z-index: 1; }
+  tbody tr.row:nth-child(4n+3) td.sym { background: var(--band); }
+  tbody tr.row:hover td.sym, tbody tr.row[aria-expanded="true"] td.sym { background: var(--blue-pale); }
+  td.sym b { font-weight: 600; }
+  td.sym .n { display: block; color: var(--muted); font-size: 13px; max-width: 28ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  td.date { white-space: nowrap; }
+  td.date.est { color: var(--blue-ink); }
+  td.date.est::before { content: "≈ "; color: var(--faint); }
+  td .soon { color: var(--today); font-weight: 600; }
+  td.muted { color: var(--faint); }
+  .tag { display: inline-block; font-size: 12px; padding: 1px 7px; border-radius: 3px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+  .tag.declared { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .tag.estimated { background: var(--blue-pale); border: 1px dashed var(--blue-ink); color: var(--blue-ink); }
+  .tag.none, .tag.irregular { background: transparent; }
+  tr.detail td { padding: 0 12px 14px 12px; background: var(--blue-pale); }
+  .events { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; margin-top: 10px; }
+  .ev { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 8px 10px; font-size: 14px; }
+  .ev.estimated { border-style: dashed; }
+  .ev .ex { font-family: var(--serif); font-size: 20px; line-height: 1.1; }
+  .ev .meta { color: var(--muted); font-size: 13px; margin-top: 2px; }
+  .detail-head { color: var(--muted); font-size: 13px; padding-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+  .detail-head a { color: var(--blue-ink); }
+  .empty { padding: 28px 12px; color: var(--muted); }
+
+  /* ---------- footer ---------- */
+  footer { margin: 36px 0 56px; color: var(--muted); font-size: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; }
+  footer h3 { margin: 0 0 6px; font-size: 14px; font-weight: 600; color: var(--ink); }
+  footer p { margin: 0 0 8px; max-width: 60ch; }
+  footer ul { margin: 0; padding-left: 18px; }
+  .err { color: var(--today); }
+
+  @media (max-width: 760px) {
+    .wrap { padding: 0 14px; }
+    header.top { padding: 28px 0 20px; }
+    h1 { font-size: 26px; }
+    .stamp { text-align: left; }
+    .grid { gap: 4px; }
+    .cell { min-height: 64px; padding: 4px; }
+    .cell .d { font-size: 16px; }
+    .chip { font-size: 11px; padding: 2px 5px; gap: 4px; }
+    .chip span { display: none; }
+    footer { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1><span class="dex">xyz</span> 除息日历</h1>
+      <p class="lede">Hyperliquid 上 trade.xyz 股票永续的底层什么时候除息、除多少。永续持仓不收分红，除息当天 oracle 会少掉这笔钱，跳空幅度在表里给出。实心是公司已宣告的，虚线是按历史节奏推算的。</p>
+    </div>
+    <div class="stamp" id="stamp">正在读取数据…</div>
+  </header>
+
+  <section class="cal" aria-labelledby="cal-h">
+    <div class="cal-head">
+      <h2 id="cal-h">未来八周</h2>
+      <div class="legend">
+        <span class="chip"><b>MSFT</b><span>0.98</span></span><span>已宣告</span>
+        <span class="chip est"><b>AAPL</b><span>0.27</span></span><span>推算</span>
+      </div>
+    </div>
+    <div class="grid" id="grid" role="grid" aria-label="未来八周除息日历"></div>
+  </section>
+
+  <div class="controls">
+    <h2>全部标的</h2>
+    <div class="seg" id="type-seg" role="group" aria-label="按类型筛选">
+      <button data-v="" aria-pressed="true">全部</button>
+      <button data-v="stock" aria-pressed="false">股票</button>
+      <button data-v="adr" aria-pressed="false">ADR</button>
+      <button data-v="etf" aria-pressed="false">ETF</button>
+      <button data-v="preferred" aria-pressed="false">优先股</button>
+    </div>
+    <div class="seg" id="status-seg" role="group" aria-label="按状态筛选">
+      <button data-v="" aria-pressed="true">全部</button>
+      <button data-v="declared" aria-pressed="false">已宣告</button>
+      <button data-v="estimated" aria-pressed="false">推算</button>
+      <button data-v="none" aria-pressed="false">不分红</button>
+    </div>
+    <input type="search" id="q" placeholder="搜代码或名称" aria-label="搜代码或名称">
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>市场</th><th>类型</th><th>下一除息日</th><th class="num">距今</th><th class="num">金额</th><th class="num">跳空</th><th>派息日</th><th>频率</th><th>状态</th><th class="num">TTM 股息率</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <div class="empty" id="empty" hidden>没有符合筛选的标的。</div>
+  </div>
+
+  <footer id="foot">
+    <div>
+      <h3>数据怎么来的</h3>
+      <p>市场列表每日从 Hyperliquid 读取 xyz 在线合约。已宣告行来自 Nasdaq 官方分红接口（仅纳斯达克上市标的）与 Yahoo Finance 的公司日历；历史分红与最新价来自 Yahoo Finance。</p>
+      <p>推算行只是把最后一次除息日按历史间隔往后排，金额沿用最近一笔，派息日按历史中位数偏移。公司随时可能变更、暂停或取消分红，推算不是任何人的承诺。</p>
+    </div>
+    <div>
+      <h3>为什么要看这个</h3>
+      <p>trade.xyz 的 <a href="https://docs.trade.xyz/perpetuals/corporate-actions" rel="noopener">Corporate Actions</a> 写明：现金分红不停牌，永续持仓者不收分红，分红的经济影响通过价格和资金费体现。因此除息日就是 oracle 跳空日。</p>
+      <p id="counts"></p>
+    </div>
+  </footer>
+</div>
+
+<script>
+(async function () {
+  const $ = (s) => document.querySelector(s);
+  const TYPE = { stock: "股票", adr: "ADR", etf: "ETF", preferred: "优先股" };
+  const FREQ = { semimonthly: "每半月", monthly: "每月", quarterly: "每季", semiannual: "每半年", annual: "每年", irregular: "不规则" };
+  const STATUS = { declared: "已宣告", estimated: "推算", irregular: "无法推算", none: "不分红" };
+  const CCY = { USD: "$", KRW: "₩", JPY: "¥", HKD: "HK$", CNY: "¥", EUR: "€", TWD: "NT$" };
+
+  let data;
+  try {
+    const r = await fetch("data.json", { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
+    data = await r.json();
+  } catch (e) {
+    $("#stamp").innerHTML = '<span class="err">读不到 data.json。</span> 本地请先运行 <code>python3 build.py</code>，线上请看 Actions 是否跑过。';
+    return;
+  }
+
+  const today = new Date(data.today + "T00:00:00Z");
+  const dayMs = 86400000;
+  const iso = (d) => d.toISOString().slice(0, 10);
+  const daysFrom = (s) => Math.round((new Date(s + "T00:00:00Z") - today) / dayMs);
+  const money = (v, ccy) => v == null ? "—" : (CCY[ccy] ?? (ccy ? ccy + " " : "")) + (Math.abs(v) >= 100 ? v.toLocaleString("en-US", { maximumFractionDigits: 0 }) : v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 4 }));
+  const pct = (v) => v == null ? "—" : v.toFixed(2) + "%";
+  const zh = (s) => { const d = new Date(s + "T00:00:00Z"); return `${d.getUTCMonth() + 1}月${d.getUTCDate()}日`; };
+  const dow = ["日", "一", "二", "三", "四", "五", "六"];
+  const fullDate = (s) => { const d = new Date(s + "T00:00:00Z"); return `${d.getUTCFullYear()}-${s.slice(5)} 周${dow[d.getUTCDay()]}`; };
+
+  const gen = new Date(data.generated_at);
+  $("#stamp").innerHTML = `数据更新于 <strong>${gen.toLocaleString("zh-CN", { hour12: false, timeZoneName: "short" })}</strong><br>跟踪 ${data.counts.dividend_tracked} 个有分红可能的底层，xyz 共 ${data.counts.live} 个在线市场`;
+
+  // ---------- calendar: 8 weeks, Mon–Fri, starting this week's Monday ----------
+  // Start on this week's Monday; on a weekend the whole week is over, so start next Monday instead.
+  const monday = new Date(today);
+  const wd = today.getUTCDay();
+  monday.setUTCDate(today.getUTCDate() + (wd === 0 ? 1 : wd === 6 ? 2 : -(wd - 1)));
+  const byDay = new Map();
+  for (const m of data.markets) for (const ev of m.events) {
+    if (!byDay.has(ev.ex)) byDay.set(ev.ex, []);
+    byDay.get(ev.ex).push({ m, ev });
+  }
+  const grid = $("#grid");
+  const frag = document.createDocumentFragment();
+  for (const n of ["周一", "周二", "周三", "周四", "周五"]) { const h = document.createElement("div"); h.className = "dow"; h.setAttribute("role", "columnheader"); h.textContent = n; frag.appendChild(h); }
+  for (let w = 0; w < 8; w++) for (let d = 0; d < 5; d++) {
+    const date = new Date(monday); date.setUTCDate(monday.getUTCDate() + w * 7 + d);
+    const key = iso(date);
+    const cell = document.createElement("div");
+    cell.className = "cell" + (key === data.today ? " today" : date < today ? " past" : "");
+    cell.setAttribute("role", "gridcell");
+    const showMonth = (d === 0 && w === 0) || date.getUTCDate() === 1;
+    cell.innerHTML = `<div class="d">${date.getUTCDate()}${key === data.today ? "<small>今天</small>" : showMonth ? `<small>${date.getUTCMonth() + 1}月</small>` : ""}</div>`;
+    const items = (byDay.get(key) || []).sort((a, b) => (a.ev.status === b.ev.status ? 0 : a.ev.status === "declared" ? -1 : 1));
+    for (const { m, ev } of items) {
+      const c = document.createElement("button");
+      c.className = "chip" + (ev.status === "estimated" ? " est" : "");
+      c.title = `${m.hl} ${STATUS[ev.status]} ${fullDate(ev.ex)} ${money(ev.amount, m.currency)}`;
+      c.innerHTML = `<b>${m.hl}</b><span>${ev.amount == null ? "" : money(ev.amount, m.currency).replace(/^\$/, "")}</span>`;
+      c.addEventListener("click", () => { const row = document.getElementById("row-" + m.hl); if (row) { if (row.getAttribute("aria-expanded") !== "true") toggle(row, m); row.scrollIntoView({ block: "center", behavior: "smooth" }); } });
+      cell.appendChild(c);
+    }
+    frag.appendChild(cell);
+  }
+  grid.appendChild(frag);
+
+  // ---------- table ----------
+  const tbody = $("#tbody");
+  let typeF = "", statusF = "", q = "";
+  const matchStatus = (m) => !statusF || (statusF === "none" ? (m.status === "none" || m.status === "irregular") : m.status === statusF);
+  function render() {
+    tbody.innerHTML = "";
+    const rows = data.markets.filter((m) => (!typeF || m.type === typeF) && matchStatus(m) && (!q || (m.hl + " " + (m.name || "") + " " + (m.ticker || "")).toLowerCase().includes(q)));
+    $("#empty").hidden = rows.length > 0;
+    for (const m of rows) {
+      const tr = document.createElement("tr");
+      tr.className = "row"; tr.id = "row-" + m.hl; tr.tabIndex = 0; tr.setAttribute("aria-expanded", "false");
+      const nx = m.next;
+      const days = nx ? daysFrom(nx.ex) : null;
+      const soon = days != null && days >= 0 && days <= 3;
+      tr.innerHTML = `
+        <td class="sym"><b>${m.hl}</b><span class="n" title="${esc(m.name || "")}">${esc(shortName(m))}</span></td>
+        <td>${TYPE[m.type] || m.type}</td>
+        <td class="date ${nx ? nx.status === "estimated" ? "est" : "" : "muted"}">${nx ? fullDate(nx.ex) : (m.status === "none" ? "近三年无分红" : "历史不规则")}</td>
+        <td class="num ${nx ? "" : "muted"}">${nx ? `<span class="${soon ? "soon" : ""}">${days === 0 ? "今天" : days + " 天"}</span>` : "—"}</td>
+        <td class="num">${nx ? money(nx.amount, m.currency) : "—"}</td>
+        <td class="num">${nx ? pct(m.next_gap_pct) : "—"}</td>
+        <td class="${nx && nx.pay ? "" : "muted"}">${nx && nx.pay ? zh(nx.pay) : "—"}</td>
+        <td>${FREQ[m.frequency] || "—"}</td>
+        <td><span class="tag ${m.status}">${STATUS[m.status]}</span>${m.errors && m.errors.length ? ' <span class="tag err" title="' + esc(m.errors.join("; ")) + '">数据缺失</span>' : ""}</td>
+        <td class="num ${m.ttm_yield_pct == null ? "muted" : ""}">${pct(m.ttm_yield_pct)}</td>`;
+      tr.addEventListener("click", () => toggle(tr, m));
+      tr.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(tr, m); } });
+      tbody.appendChild(tr);
+    }
+  }
+  function toggle(tr, m) {
+    const open = tr.getAttribute("aria-expanded") === "true";
+    const next = tr.nextElementSibling;
+    if (next && next.classList.contains("detail")) next.remove();
+    tr.setAttribute("aria-expanded", String(!open));
+    if (open) return;
+    const d = document.createElement("tr"); d.className = "detail";
+    const td = document.createElement("td"); td.colSpan = 10;
+    const links = [];
+    if (m.yahoo) links.push(`<a href="https://finance.yahoo.com/quote/${encodeURIComponent(m.yahoo)}/history/?filter=div" rel="noopener">Yahoo 分红历史</a>`);
+    if (m.exchange === "Nasdaq" && m.ticker) links.push(`<a href="https://www.nasdaq.com/market-activity/${m.type === "etf" ? "etf" : "stocks"}/${m.ticker.toLowerCase()}/dividend-history" rel="noopener">Nasdaq 分红页</a>`);
+    links.push(`<a href="https://app.hyperliquid.xyz/trade/xyz:${m.hl}" rel="noopener">Hyperliquid 合约</a>`);
+    const last = m.last ? `上次除息 ${fullDate(m.last.ex)}，${money(m.last.amount, m.currency)}` : "近三年没有分红记录";
+    const price = m.price != null ? `最新价 ${money(m.price, m.currency)}` : "";
+    td.innerHTML = `<div class="detail-head"><span>${esc(m.name || "")}</span><span>${last}</span><span>${price}</span>${links.map((l) => `<span>${l}</span>`).join("")}</div>`;
+    if (m.events.length) {
+      const g = document.createElement("div"); g.className = "events";
+      for (const ev of m.events) {
+        const gap = ev.amount != null && m.price ? (ev.amount / m.price * 100).toFixed(2) + "%" : "—";
+        g.insertAdjacentHTML("beforeend", `<div class="ev ${ev.status}"><div class="ex">${ev.status === "estimated" ? "≈ " : ""}${fullDate(ev.ex)}</div><div class="meta">${money(ev.amount, m.currency)}，跳空 ${gap}${ev.pay ? `，派息 ${zh(ev.pay)}` : ""}<br>${STATUS[ev.status]}${ev.source === "nasdaq" ? "，Nasdaq" : ev.source === "yahoo" ? "，Yahoo" : ""}</div></div>`);
+      }
+      td.appendChild(g);
+    } else {
+      td.insertAdjacentHTML("beforeend", `<p style="margin:10px 0 0;color:var(--muted)">${m.status === "irregular" ? "历史间隔不规则，不做推算。" : "没有可展示的分红事件。"}</p>`);
+    }
+    d.appendChild(td);
+    tr.after(d);
+  }
+  function shortName(m) {
+    return (m.name || "").replace(/^1 (share of the |share of |registered ordinary share of |Class [A-Z] ordinary share of |H-share of |ordinary share of )?/, "").replace(/\s*\((Nasdaq|NYSE|NYSE Arca|Cboe BZX|KRX|TSE|HKEX|SSE STAR|SSE):[^)]*\)/, "").replace(/ common stock| common share| ordinary share| Class [A-Z]/g, "").trim();
+  }
+  function esc(s) { return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+
+  for (const [id, set] of [["#type-seg", (v) => (typeF = v)], ["#status-seg", (v) => (statusF = v)]]) {
+    $(id).addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      for (const x of $(id).querySelectorAll("button")) x.setAttribute("aria-pressed", String(x === b));
+      set(b.dataset.v); render();
+    });
+  }
+  $("#q").addEventListener("input", (e) => { q = e.target.value.trim().toLowerCase(); render(); });
+  render();
+
+  const ex = data.excluded.reduce((a, x) => ((a[x.type] = (a[x.type] || 0) + 1), a), {});
+  const exText = Object.entries(ex).map(([t, n]) => `${{ index: "指数", commodity: "商品", fx: "外汇", preipo: "Pre-IPO" }[t] || t} ${n}`).join("，");
+  $("#counts").textContent = `未列入：${exText}（这些市场没有分红）。` + (data.unmapped.length ? ` 链上新出现但尚未映射：${data.unmapped.join("、")}。` : "");
+})();
+</script>
+</body>
+</html>

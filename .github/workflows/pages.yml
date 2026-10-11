@@ -1,0 +1,45 @@
+name: Build and deploy
+
+on:
+  schedule:
+    - cron: "30 22 * * 1-5"   # 22:30 UTC, after the US close, weekdays
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python3 -m pytest -q test_build.py
+        env:
+          PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
+      - name: Fetch dividends
+        run: python3 build.py site/data.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

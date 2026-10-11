@@ -1,0 +1,1142 @@
+[
+ {
+  "hl": "XYZ100",
+  "doc": "XYZ100",
+  "name": "XYZ100 tracks a modified market-capitalization-weighted index of 100 of the largest, most actively-traded, non-financial companies that are listed on a U.S. stock exchange, serving as a benchmark for large-cap U.S. technology and growth equities.",
+  "type": "index",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "TSLA",
+  "doc": "TSLA",
+  "name": "1 share of Tesla, Inc. common stock (Nasdaq: TSLA)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "TSLA",
+  "yahoo": "TSLA",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "NVDA",
+  "doc": "NVDA",
+  "name": "1 share of NVIDIA Corporation common stock (Nasdaq: NVDA)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "NVDA",
+  "yahoo": "NVDA",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "GOLD",
+  "doc": "GOLD",
+  "name": "the USD spot price of 1 troy ounce of gold (XAU/USD).",
+  "type": "commodity",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "HOOD",
+  "doc": "HOOD",
+  "name": "1 share of Robinhood Markets, Inc. Class A common stock (Nasdaq: HOOD)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "HOOD",
+  "yahoo": "HOOD",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "INTC",
+  "doc": "INTC",
+  "name": "1 share of Intel Corporation common stock (Nasdaq: INTC)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "INTC",
+  "yahoo": "INTC",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "PLTR",
+  "doc": "PLTR",
+  "name": "1 share of Palantir Technologies Inc. Class A common stock (Nasdaq: PLTR)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "PLTR",
+  "yahoo": "PLTR",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "COIN",
+  "doc": "COIN",
+  "name": "1 share of Coinbase Global, Inc. Class A common stock (Nasdaq: COIN)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "COIN",
+  "yahoo": "COIN",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "META",
+  "doc": "META",
+  "name": "1 share of Meta Platforms, Inc. Class A common stock (Nasdaq: META)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "META",
+  "yahoo": "META",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "AAPL",
+  "doc": "AAPL",
+  "name": "1 share of Apple Inc. common stock (Nasdaq: AAPL)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "AAPL",
+  "yahoo": "AAPL",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "MSFT",
+  "doc": "MSFT",
+  "name": "1 share of Microsoft Corporation common stock (Nasdaq: MSFT)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "MSFT",
+  "yahoo": "MSFT",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "ORCL",
+  "doc": "ORCL",
+  "name": "1 share of Oracle Corporation common stock (NYSE: ORCL)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "ORCL",
+  "yahoo": "ORCL",
+  "nasdaq": null
+ },
+ {
+  "hl": "GOOGL",
+  "doc": "GOOGL",
+  "name": "1 share of Alphabet Inc. Class A common stock (Nasdaq: GOOGL)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "GOOGL",
+  "yahoo": "GOOGL",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "AMZN",
+  "doc": "AMZN",
+  "name": "1 share of Amazon.com, Inc. common stock (Nasdaq: AMZN)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "AMZN",
+  "yahoo": "AMZN",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "AMD",
+  "doc": "AMD",
+  "name": "1 share of Advanced Micro Devices, Inc. common stock (Nasdaq: AMD)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "AMD",
+  "yahoo": "AMD",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "MU",
+  "doc": "MU",
+  "name": "1 share of Micron Technology, Inc. common stock (Nasdaq: MU)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "MU",
+  "yahoo": "MU",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "SNDK",
+  "doc": "SNDK",
+  "name": "1 share of Sandisk Corporation common stock (Nasdaq: SNDK)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "SNDK",
+  "yahoo": "SNDK",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "MSTR",
+  "doc": "MSTR",
+  "name": "1 share of Strategy Inc Class A common stock (Nasdaq: MSTR)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "MSTR",
+  "yahoo": "MSTR",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "CRCL",
+  "doc": "CRCL",
+  "name": "1 share of Circle Internet Group, Inc. Class A common stock (NYSE: CRCL)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "CRCL",
+  "yahoo": "CRCL",
+  "nasdaq": null
+ },
+ {
+  "hl": "NFLX",
+  "doc": "NFLX",
+  "name": "1 share of Netflix, Inc. common stock (Nasdaq: NFLX)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "NFLX",
+  "yahoo": "NFLX",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "COST",
+  "doc": "COST",
+  "name": "1 share of Costco Wholesale Corporation common stock (Nasdaq: COST)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "COST",
+  "yahoo": "COST",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "LLY",
+  "doc": "LLY",
+  "name": "1 share of Eli Lilly and Company common stock (NYSE: LLY)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "LLY",
+  "yahoo": "LLY",
+  "nasdaq": null
+ },
+ {
+  "hl": "SKHX",
+  "doc": "SKHYNIX",
+  "name": "1 SK hynix Inc. common share (KRX: 000660)",
+  "type": "stock",
+  "exchange": "KRX",
+  "ticker": "000660",
+  "yahoo": "000660.KS",
+  "nasdaq": null
+ },
+ {
+  "hl": "TSM",
+  "doc": "TSM",
+  "name": "1 Taiwan Semiconductor Manufacturing Company Limited ADS (NYSE: TSM), representing 5 common shares (TWSE: 2330)",
+  "type": "adr",
+  "exchange": "NYSE",
+  "ticker": "TSM",
+  "yahoo": "TSM",
+  "nasdaq": null
+ },
+ {
+  "hl": "JPY",
+  "doc": "JPY",
+  "name": "the USD/JPY spot exchange rate: Japanese yen per 1 U.S. dollar",
+  "type": "fx",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "EUR",
+  "doc": "EUR",
+  "name": "the EUR/USD spot exchange rate: U.S. dollars per 1 euro",
+  "type": "fx",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "SILVER",
+  "doc": "SILVER",
+  "name": "the USD spot price of 1 troy ounce of silver (XAG/USD).",
+  "type": "commodity",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "RIVN",
+  "doc": "RIVN",
+  "name": "1 share of Rivian Automotive, Inc. Class A common stock (Nasdaq: RIVN)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "RIVN",
+  "yahoo": "RIVN",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "BABA",
+  "doc": "BABA",
+  "name": "1 Alibaba Group Holding Limited ADS (NYSE: BABA), representing 8 ordinary shares (HKEX: 9988)",
+  "type": "adr",
+  "exchange": "NYSE",
+  "ticker": "BABA",
+  "yahoo": "BABA",
+  "nasdaq": null
+ },
+ {
+  "hl": "CL",
+  "doc": "WTIOIL",
+  "name": "the USD price of 1 barrel of WTI Light Sweet Crude Oil. WTI serves as a primary global benchmark for oil prices due to its high quality (low density, low sulfur).",
+  "type": "commodity",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "COPPER",
+  "doc": "COPPER",
+  "name": "the USD price of 1 pound of high-grade copper. Copper is a core industrial metal and a widely followed barometer of global manufacturing and infrastructure demand.",
+  "type": "commodity",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "NATGAS",
+  "doc": "NATGAS",
+  "name": "the USD price of 1 MMBtu of Henry Hub natural gas. Henry Hub serves as the primary U.S. benchmark for natural gas pricing and is widely referenced in global energy markets.",
+  "type": "commodity",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "SMSN",
+  "doc": "SAMSUNG",
+  "name": "1 Samsung Electronics Co., Ltd. common share (KRX: 005930)",
+  "type": "stock",
+  "exchange": "KRX",
+  "ticker": "005930",
+  "yahoo": "005930.KS",
+  "nasdaq": null
+ },
+ {
+  "hl": "PLATINUM",
+  "doc": "PLATINUM",
+  "name": "the USD spot price of 1 troy ounce of platinum (XPT/USD).",
+  "type": "commodity",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "USAR",
+  "doc": "USAR",
+  "name": "1 share of USA Rare Earth, Inc. Class A common stock (Nasdaq: USAR)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "USAR",
+  "yahoo": "USAR",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "CRWV",
+  "doc": "CRWV",
+  "name": "1 share of CoreWeave, Inc. Class A common stock (Nasdaq: CRWV)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "CRWV",
+  "yahoo": "CRWV",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "URNM",
+  "doc": "URNM",
+  "name": "1 share of the Sprott Uranium Miners ETF (NYSE Arca: URNM)",
+  "type": "etf",
+  "exchange": "NYSE Arca",
+  "ticker": "URNM",
+  "yahoo": "URNM",
+  "nasdaq": null
+ },
+ {
+  "hl": "PALLADIUM",
+  "doc": "PALLADIUM",
+  "name": "the USD spot price of 1 troy ounce of palladium (XPD/USD).",
+  "type": "commodity",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "GME",
+  "doc": "GME",
+  "name": "1 share of GameStop Corp. Class A common stock (NYSE: GME)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "GME",
+  "yahoo": "GME",
+  "nasdaq": null
+ },
+ {
+  "hl": "KR200",
+  "doc": "KR200",
+  "name": "the native KRW level of the Korea 200, a capitalization-weighted index of 200 leading South Korean equities. No FX conversion is applied; index-point P&L is cash-settled in USDC.",
+  "type": "index",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "SOFTBANK",
+  "doc": "SOFTBANK",
+  "name": "1 SoftBank Group Corp. ordinary share (TSE: 9984)",
+  "type": "stock",
+  "exchange": "TSE",
+  "ticker": "9984",
+  "yahoo": "9984.T",
+  "nasdaq": null
+ },
+ {
+  "hl": "JP225",
+  "doc": "JP225",
+  "name": "the native JPY level of the Japan 225, a price-weighted index of 225 leading Japanese equities. No FX conversion is applied; index-point P&L is cash-settled in USDC.",
+  "type": "index",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "HYUNDAI",
+  "doc": "HYUNDAI",
+  "name": "1 Hyundai Motor Company common share (KRX: 005380)",
+  "type": "stock",
+  "exchange": "KRX",
+  "ticker": "005380",
+  "yahoo": "005380.KS",
+  "nasdaq": null
+ },
+ {
+  "hl": "KIOXIA",
+  "doc": "KIOXIA",
+  "name": "1 Kioxia Holdings Corporation ordinary share (TSE: 285A)",
+  "type": "stock",
+  "exchange": "TSE",
+  "ticker": "285A",
+  "yahoo": "285A.T",
+  "nasdaq": null
+ },
+ {
+  "hl": "EWY",
+  "doc": "EWY",
+  "name": "1 share of the iShares MSCI South Korea ETF (NYSE Arca: EWY)",
+  "type": "etf",
+  "exchange": "NYSE Arca",
+  "ticker": "EWY",
+  "yahoo": "EWY",
+  "nasdaq": null
+ },
+ {
+  "hl": "EWJ",
+  "doc": "EWJ",
+  "name": "1 share of the iShares MSCI Japan ETF (NYSE Arca: EWJ)",
+  "type": "etf",
+  "exchange": "NYSE Arca",
+  "ticker": "EWJ",
+  "yahoo": "EWJ",
+  "nasdaq": null
+ },
+ {
+  "hl": "BRENTOIL",
+  "doc": "BRENTOIL",
+  "name": "the USD price of 1 barrel of Brent crude oil. Brent is the world's primary oil benchmark, used to price the majority of globally traded crude.",
+  "type": "commodity",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "HIMS",
+  "doc": "HIMS",
+  "name": "1 share of Hims & Hers Health, Inc. Class A common stock (NYSE: HIMS)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "HIMS",
+  "yahoo": "HIMS",
+  "nasdaq": null
+ },
+ {
+  "hl": "SP500",
+  "doc": "SP500",
+  "name": "the S&P 500 Index, a free-float-capitalization-weighted benchmark of 500 leading publicly-traded U.S. companies, widely regarded as the best single gauge of large-cap U.S. equities",
+  "type": "index",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "DKNG",
+  "doc": "DKNG",
+  "name": "1 share of DraftKings Inc. Class A common stock (Nasdaq: DKNG)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "DKNG",
+  "yahoo": "DKNG",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "LITE",
+  "doc": "LITE",
+  "name": "1 share of Lumentum Holdings Inc. common stock (Nasdaq: LITE)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "LITE",
+  "yahoo": "LITE",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "XLE",
+  "doc": "XLE",
+  "name": "1 share of the State Street Energy Select Sector SPDR ETF (NYSE Arca: XLE)",
+  "type": "etf",
+  "exchange": "NYSE Arca",
+  "ticker": "XLE",
+  "yahoo": "XLE",
+  "nasdaq": null
+ },
+ {
+  "hl": "BX",
+  "doc": "BX",
+  "name": "1 share of Blackstone Inc. common stock (NYSE: BX)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "BX",
+  "yahoo": "BX",
+  "nasdaq": null
+ },
+ {
+  "hl": "PURRDAT",
+  "doc": "PURRDAT",
+  "name": "1 share of Hyperliquid Strategies Inc. common stock (Nasdaq: PURR)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "PURR",
+  "yahoo": "PURR",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "MRVL",
+  "doc": "MRVL",
+  "name": "1 share of Marvell Technology, Inc. common stock (Nasdaq: MRVL)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "MRVL",
+  "yahoo": "MRVL",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "RKLB",
+  "doc": "RKLB",
+  "name": "1 share of Rocket Lab Corporation common stock (Nasdaq: RKLB)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "RKLB",
+  "yahoo": "RKLB",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "BIRD",
+  "doc": "BIRD",
+  "name": "1 share of Smartbird, Inc. Class A common stock (Nasdaq: BIRD)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "BIRD",
+  "yahoo": "BIRD",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "DRAM",
+  "doc": "DRAM",
+  "name": "1 share of the Roundhill Memory ETF (Cboe BZX: DRAM)",
+  "type": "etf",
+  "exchange": "Cboe BZX",
+  "ticker": "DRAM",
+  "yahoo": "DRAM",
+  "nasdaq": null
+ },
+ {
+  "hl": "CBRS",
+  "doc": "CBRS",
+  "name": "1 share of Cerebras Systems Inc. Class A common stock (Nasdaq: CBRS)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "CBRS",
+  "yahoo": "CBRS",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "EWZ",
+  "doc": "EWZ",
+  "name": "1 share of the iShares MSCI Brazil ETF (NYSE Arca: EWZ)",
+  "type": "etf",
+  "exchange": "NYSE Arca",
+  "ticker": "EWZ",
+  "yahoo": "EWZ",
+  "nasdaq": null
+ },
+ {
+  "hl": "ZM",
+  "doc": "ZM",
+  "name": "1 share of Zoom Communications, Inc. Class A common stock (Nasdaq: ZM)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "ZM",
+  "yahoo": "ZM",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "EBAY",
+  "doc": "EBAY",
+  "name": "1 share of eBay Inc. common stock (Nasdaq: EBAY)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "EBAY",
+  "yahoo": "EBAY",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "ARM",
+  "doc": "ARM",
+  "name": "1 Arm Holdings plc ADS (Nasdaq: ARM), representing 1 ordinary share",
+  "type": "adr",
+  "exchange": "Nasdaq",
+  "ticker": "ARM",
+  "yahoo": "ARM",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "EWT",
+  "doc": "EWT",
+  "name": "1 share of the iShares MSCI Taiwan ETF (NYSE Arca: EWT)",
+  "type": "etf",
+  "exchange": "NYSE Arca",
+  "ticker": "EWT",
+  "yahoo": "EWT",
+  "nasdaq": null
+ },
+ {
+  "hl": "GBP",
+  "doc": "GBP",
+  "name": "the GBP/USD spot exchange rate: U.S. dollars per 1 pound sterling",
+  "type": "fx",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "SPCX",
+  "doc": "SPCX",
+  "name": "1 share of Space Exploration Technologies Corp. Class A common stock (Nasdaq: SPCX)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "SPCX",
+  "yahoo": "SPCX",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "ASML",
+  "doc": "ASML",
+  "name": "1 registered ordinary share of ASML Holding N.V. (Nasdaq: ASML)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "ASML",
+  "yahoo": "ASML",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "MINIMAX",
+  "doc": "MINIMAX",
+  "name": "1 MiniMax Group Inc. Class A ordinary share (HKEX: 0100)",
+  "type": "stock",
+  "exchange": "HKEX",
+  "ticker": "0100",
+  "yahoo": "0100.HK",
+  "nasdaq": null
+ },
+ {
+  "hl": "BB",
+  "doc": "BB",
+  "name": "1 share of BlackBerry Limited common stock (NYSE: BB)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "BB",
+  "yahoo": "BB",
+  "nasdaq": null
+ },
+ {
+  "hl": "QNT",
+  "doc": "QNT",
+  "name": "1 share of Quantinuum Inc. Class A common stock (Nasdaq: QNT)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "QNT",
+  "yahoo": "QNT",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "DELL",
+  "doc": "DELL",
+  "name": "1 share of Dell Technologies Inc. Class C common stock (NYSE: DELL)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "DELL",
+  "yahoo": "DELL",
+  "nasdaq": null
+ },
+ {
+  "hl": "IBM",
+  "doc": "IBM",
+  "name": "1 share of International Business Machines Corporation common stock (NYSE: IBM)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "IBM",
+  "yahoo": "IBM",
+  "nasdaq": null
+ },
+ {
+  "hl": "AVGO",
+  "doc": "AVGO",
+  "name": "1 share of Broadcom Inc. common stock (Nasdaq: AVGO)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "AVGO",
+  "yahoo": "AVGO",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "NOW",
+  "doc": "NOW",
+  "name": "1 share of ServiceNow, Inc. common stock (NYSE: NOW)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "NOW",
+  "yahoo": "NOW",
+  "nasdaq": null
+ },
+ {
+  "hl": "NBIS",
+  "doc": "NBIS",
+  "name": "1 Nebius Group N.V. Class A ordinary share (Nasdaq: NBIS)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "NBIS",
+  "yahoo": "NBIS",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "WDC",
+  "doc": "WDC",
+  "name": "1 share of Western Digital Corporation common stock (Nasdaq: WDC)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "WDC",
+  "yahoo": "WDC",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "NOK",
+  "doc": "NOK",
+  "name": "1 Nokia Corporation ADS (NYSE: NOK), representing 1 share (Nasdaq Helsinki: NOKIA)",
+  "type": "adr",
+  "exchange": "NYSE",
+  "ticker": "NOK",
+  "yahoo": "NOK",
+  "nasdaq": null
+ },
+ {
+  "hl": "SMH",
+  "doc": "SMH",
+  "name": "1 share of the VanEck Semiconductor ETF (Nasdaq: SMH)",
+  "type": "etf",
+  "exchange": "Nasdaq",
+  "ticker": "SMH",
+  "yahoo": "SMH",
+  "nasdaq": "etf"
+ },
+ {
+  "hl": "BE",
+  "doc": "BE",
+  "name": "1 share of Bloom Energy Corporation Class A common stock (NYSE: BE)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "BE",
+  "yahoo": "BE",
+  "nasdaq": null
+ },
+ {
+  "hl": "ZHIPU",
+  "doc": "ZHIPU",
+  "name": "1 H-share of Knowledge Atlas Technology Joint Stock Company Limited (HKEX: 2513)",
+  "type": "stock",
+  "exchange": "HKEX",
+  "ticker": "2513",
+  "yahoo": "2513.HK",
+  "nasdaq": null
+ },
+ {
+  "hl": "QCOM",
+  "doc": "QCOM",
+  "name": "1 share of QUALCOMM Incorporated common stock (Nasdaq: QCOM)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "QCOM",
+  "yahoo": "QCOM",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "STRC",
+  "doc": "STRC",
+  "name": "1 share of Strategy Inc's Variable Rate Series A Perpetual Stretch Preferred Stock (Nasdaq: STRC)",
+  "type": "preferred",
+  "exchange": "Nasdaq",
+  "ticker": "STRC",
+  "yahoo": "STRC",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "BOT",
+  "doc": "BOT",
+  "name": "1 share of RoboStrategy, Inc. common stock (Nasdaq: BOT)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "BOT",
+  "yahoo": "BOT",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "AMAT",
+  "doc": "AMAT",
+  "name": "1 share of Applied Materials, Inc. common stock (Nasdaq: AMAT)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "AMAT",
+  "yahoo": "AMAT",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "GIGADEV",
+  "doc": "GIGADEV",
+  "name": "1 GigaDevice Semiconductor Inc. A-share (SSE: 603986)",
+  "type": "stock",
+  "exchange": "SSE",
+  "ticker": "603986",
+  "yahoo": "603986.SS",
+  "nasdaq": null
+ },
+ {
+  "hl": "SHAZ",
+  "doc": "SHAZ",
+  "name": "1 share of SharonAI Holdings Inc. Class A common stock (Nasdaq: SHAZ)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "SHAZ",
+  "yahoo": "SHAZ",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "SKHY",
+  "doc": "SKHY",
+  "name": "1 SK hynix Inc. ADS (Nasdaq: SKHY), representing one-tenth of 1 common share (KRX: 000660)",
+  "type": "adr",
+  "exchange": "Nasdaq",
+  "ticker": "SKHY",
+  "yahoo": "SKHY",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "KSTR",
+  "doc": "KSTR",
+  "name": "1 share of the KraneShares China Technology & Semiconductor STAR 50 Index ETF (NYSE Arca: KSTR)",
+  "type": "etf",
+  "exchange": "NYSE Arca",
+  "ticker": "KSTR",
+  "yahoo": "KSTR",
+  "nasdaq": null
+ },
+ {
+  "hl": "CXMT",
+  "doc": "CXMT",
+  "name": "1 CXMT Corporation A-share (SSE STAR: 688825)",
+  "type": "stock",
+  "exchange": "SSE STAR",
+  "ticker": "688825",
+  "yahoo": "688825.SS",
+  "nasdaq": null
+ },
+ {
+  "hl": "GEV",
+  "doc": "GEV",
+  "name": "1 share of GE Vernova Inc. common stock (NYSE: GEV)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "GEV",
+  "yahoo": "GEV",
+  "nasdaq": null
+ },
+ {
+  "hl": "KORU",
+  "doc": "KORU",
+  "name": "1 share of the Direxion Daily MSCI South Korea Bull 3X ETF (NYSE Arca: KORU)",
+  "type": "etf",
+  "exchange": "NYSE Arca",
+  "ticker": "KORU",
+  "yahoo": "KORU",
+  "nasdaq": null
+ },
+ {
+  "hl": "UNITREE",
+  "doc": "UNITREE",
+  "name": "1 Yushu Technology Co., Ltd. A-share (SSE STAR: 688836)",
+  "type": "stock",
+  "exchange": "SSE STAR",
+  "ticker": "688836",
+  "yahoo": "688836.SS",
+  "nasdaq": null
+ },
+ {
+  "hl": "LYTE",
+  "doc": "LYTE",
+  "name": "1 share of the Roundhill Photonics & Optics ETF (Cboe BZX: LYTE)",
+  "type": "etf",
+  "exchange": "Cboe BZX",
+  "ticker": "LYTE",
+  "yahoo": "LYTE",
+  "nasdaq": null
+ },
+ {
+  "hl": "NCLD",
+  "doc": "NCLD",
+  "name": "1 share of the Roundhill Neocloud ETF (Nasdaq: NCLD)",
+  "type": "etf",
+  "exchange": "Nasdaq",
+  "ticker": "NCLD",
+  "yahoo": "NCLD",
+  "nasdaq": "etf"
+ },
+ {
+  "hl": "SOXL",
+  "doc": "SOXL",
+  "name": "1 share of the Direxion Daily Semiconductor Bull 3X Shares (NYSE Arca: SOXL)",
+  "type": "etf",
+  "exchange": "NYSE Arca",
+  "ticker": "SOXL",
+  "yahoo": "SOXL",
+  "nasdaq": null
+ },
+ {
+  "hl": "MAGS",
+  "doc": "MAGS",
+  "name": "1 share of the Roundhill Magnificent Seven ETF (Cboe BZX: MAGS)",
+  "type": "etf",
+  "exchange": "Cboe BZX",
+  "ticker": "MAGS",
+  "yahoo": "MAGS",
+  "nasdaq": null
+ },
+ {
+  "hl": "IREN",
+  "doc": "IREN",
+  "name": "1 IREN Limited ordinary share (Nasdaq: IREN)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "IREN",
+  "yahoo": "IREN",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "NET",
+  "doc": "NET",
+  "name": "1 share of Cloudflare, Inc. Class A common stock (NYSE: NET)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "NET",
+  "yahoo": "NET",
+  "nasdaq": null
+ },
+ {
+  "hl": "CRWD",
+  "doc": "CRWD",
+  "name": "1 share of CrowdStrike Holdings, Inc. Class A common stock (Nasdaq: CRWD)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "CRWD",
+  "yahoo": "CRWD",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "RDDT",
+  "doc": "RDDT",
+  "name": "1 share of Reddit, Inc. Class A common stock (NYSE: RDDT)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "RDDT",
+  "yahoo": "RDDT",
+  "nasdaq": null
+ },
+ {
+  "hl": "AAOI",
+  "doc": "AAOI",
+  "name": "1 share of Applied Optoelectronics, Inc. common stock (Nasdaq: AAOI)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "AAOI",
+  "yahoo": "AAOI",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "MRNA",
+  "doc": "MRNA",
+  "name": "1 share of Moderna, Inc. common stock (Nasdaq: MRNA)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "MRNA",
+  "yahoo": "MRNA",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "XBI",
+  "doc": "XBI",
+  "name": "1 share of the SPDR S&P Biotech ETF (NYSE Arca: XBI)",
+  "type": "etf",
+  "exchange": "NYSE Arca",
+  "ticker": "XBI",
+  "yahoo": "XBI",
+  "nasdaq": null
+ },
+ {
+  "hl": "SHEIN",
+  "doc": "SHEIN",
+  "name": "1 Class B ordinary share of SHEIN Global Holdings Limited (HKEX: 0625)",
+  "type": "stock",
+  "exchange": "HKEX",
+  "ticker": "0625",
+  "yahoo": "0625.HK",
+  "nasdaq": null
+ },
+ {
+  "hl": "BMNR",
+  "doc": "BMNR",
+  "name": "1 share of BitMine Immersion Technologies, Inc. common stock (NYSE: BMNR)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "BMNR",
+  "yahoo": "BMNR",
+  "nasdaq": null
+ },
+ {
+  "hl": "SNXX",
+  "doc": "SNXX",
+  "name": "1 share of the Tradr 2X Long SNDK Daily ETF (Cboe BZX: SNXX)",
+  "type": "etf",
+  "exchange": "Cboe BZX",
+  "ticker": "SNXX",
+  "yahoo": "SNXX",
+  "nasdaq": null
+ },
+ {
+  "hl": "CVX",
+  "doc": "CVX",
+  "name": "1 share of Chevron Corporation common stock (NYSE: CVX)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "CVX",
+  "yahoo": "CVX",
+  "nasdaq": null
+ },
+ {
+  "hl": "TLT",
+  "doc": "TLT",
+  "name": "1 share of the iShares 20+ Year Treasury Bond ETF (Nasdaq: TLT)",
+  "type": "etf",
+  "exchange": "Nasdaq",
+  "ticker": "TLT",
+  "yahoo": "TLT",
+  "nasdaq": "etf"
+ },
+ {
+  "hl": "HO",
+  "doc": "DIESEL",
+  "name": "the USD price of 1 U.S. gallon of New York Harbor ultra-low sulfur diesel (ULSD).",
+  "type": "commodity",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "OURA",
+  "doc": "OURA",
+  "name": "Oura Health Oy (pre-IPO perpetual)",
+  "type": "preipo",
+  "exchange": null,
+  "ticker": null,
+  "yahoo": null,
+  "nasdaq": null
+ },
+ {
+  "hl": "LRCX",
+  "doc": "LRCX",
+  "name": "1 share of Lam Research Corporation common stock (Nasdaq: LRCX)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "LRCX",
+  "yahoo": "LRCX",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "UMC",
+  "doc": "UMC",
+  "name": "1 ADS of United Microelectronics Corporation (NYSE: UMC), representing 5 common shares (TWSE: 2303)",
+  "type": "adr",
+  "exchange": "NYSE",
+  "ticker": "UMC",
+  "yahoo": "UMC",
+  "nasdaq": null
+ },
+ {
+  "hl": "TWST",
+  "doc": "TWST",
+  "name": "1 share of Twist Bioscience Corporation common stock (Nasdaq: TWST)",
+  "type": "stock",
+  "exchange": "Nasdaq",
+  "ticker": "TWST",
+  "yahoo": "TWST",
+  "nasdaq": "stocks"
+ },
+ {
+  "hl": "GLW",
+  "doc": "GLW",
+  "name": "1 share of Corning Incorporated common stock (NYSE: GLW)",
+  "type": "stock",
+  "exchange": "NYSE",
+  "ticker": "GLW",
+  "yahoo": "GLW",
+  "nasdaq": null
+ }
+]
